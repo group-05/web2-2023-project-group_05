@@ -2,7 +2,7 @@ import { getAuthenticatedUser } from '../utils/auths';
 
 const readAllTopics = async () => {
     try {
-      const res = await fetch('/api/topics');
+      const res = await fetch(`${process.env.API_BASE_URL}/api/topics`);
       const TopicView = await res.json();
       return TopicView;
     } catch (err) {
@@ -24,7 +24,7 @@ const readAllTopics = async () => {
       };
       console.log(`after${JSON.stringify(topic)}`)
   
-      const response = await fetch(`/api/topics`, options);
+      const response = await fetch(`${process.env.API_BASE_URL}/api/topics`, options);
 
       const createdTopic = await response.json();
       
@@ -47,7 +47,7 @@ const readAllTopics = async () => {
         },
       };
   
-      const response = await fetch(`/api/topics/${id}`, options);
+      const response = await fetch(`${process.env.API_BASE_URL}/api/topics/${id}`, options);
   
       const deletedTopic = await response.json();
   
@@ -70,7 +70,7 @@ const readAllTopics = async () => {
         },
       };
   
-      const response = await fetch(`/api/topics/${id}`, options);
+      const response = await fetch(`${process.env.API_BASE_URL}/api/topics/${id}`, options);
   
       const updatedTopic = await response.json();
   
@@ -83,7 +83,7 @@ const readAllTopics = async () => {
 
   const getAllCategories = async () => {
     try {
-        const response = await fetch('/api/categories/?order=title');
+        const response = await fetch(`${process.env.API_BASE_URL}/api/categories/?order=title`);
         const getCategoryForTopic = await response.json();
         return getCategoryForTopic;
     } catch (err) {
