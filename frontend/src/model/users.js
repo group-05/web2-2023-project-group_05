@@ -16,7 +16,7 @@ const addOneUser = async (user) => {
       },
     };
 
-    const response = await fetch('/api/auths/register', options);
+    const response = await fetch(`${process.env.API_BASE_URL}/api/auths/register`, options);
     if (!response.ok) throw new Error(`fetch error : ${response.status} : ${response.statusText}`);
 
     const createdUser = await response.json();
