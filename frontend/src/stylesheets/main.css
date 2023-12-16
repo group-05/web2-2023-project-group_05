@@ -1,0 +1,470 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+#theme-toggle {
+  position: relative;
+  top: -50px; /* Ajustez cette valeur pour déplacer le bouton */
+}
+body.dark-mode {
+  background-color: #3f352d;
+  color: #f0f0f0;
+}
+
+/* Styles pour .hero en mode sombre */
+body.dark-mode .hero {
+  background: linear-gradient(245.59deg, #583355 0%, #3e2b50 28.53%, rgb(58, 79, 85) 75.52%);
+  /* ... Autres styles de .hero en mode sombre ... */
+}
+
+/* Styles pour footer en mode sombre */
+body.dark-mode footer {
+  color: #e91b1b;
+  /* ... Autres styles du footer en mode sombre ... */
+}
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 9%;
+  background: transparent;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  border-radius: 40px;
+  font-size: 40px;
+  font-weight: 700;
+  color: rgb(64, 19, 96);
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+}
+
+.navlist-container {
+  display: flex;
+  align-items: center;
+}
+
+.navlist {
+  display: flex;
+  margin-left: 500px;
+}
+
+.navlist a {
+  color: white;
+  margin-left: 20px;
+  font-size: 10px;
+  font-weight: 300;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+}
+
+.navlist a:hover {
+  border-bottom: 2px solid white;
+}
+
+#searchForm{
+  left: 500px;
+  position: relative;
+}
+
+#searchForm button img{
+  width: 25px;
+  height: 25px;
+}
+
+#rules{
+  margin-top: 90px;
+  padding: 20px;
+}
+
+.hero{
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(245.59deg, #954d8e 0%, #553870 28.53%, rgb(128, 186, 203) 75.52%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+section{
+  padding: 0 19%;
+}
+
+
+.hero-text h1{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 90px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 45px,
+}
+
+.hero-text h4{
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.hero-text p{
+  color: white;
+  font-size: 10px;
+  line-height: 1.9;
+  margin-bottom: 40px;  
+}
+
+.hero-img img{
+  margin-left: 50px;
+  width: 100%;
+  height: 100%;
+}
+.hero-text a{ 
+  display: inline-block;
+  color: white;
+  background: #0d4560;
+  border: 1px solid transparent;
+  padding: 12px 30px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all .55s ease;
+
+}
+
+.hero-text a:hover{
+  background: transparent;
+  border: 1px solide white;
+  transform: translateX(8px);
+}
+
+.hero-text a.ctaa{
+  background: transparent;
+  border: 1px solid white;
+  margin-left: 20px;
+}
+
+.hero-text a.ctaa i{
+vertical-align: middle;
+margin-right: 5px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+button{
+  border-radius: 10px;
+  color: #553870;
+}
+
+/*
+.nav-item {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.nav-item a:hover {
+  background-color: rgb(33, 3, 51);
+  color: rgb(5, 5, 97);
+}
+
+.nav-item:hover .sub-menu {
+  display: block;
+}
+*/
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: aqua;
+  width: 150px;
+  padding: 0;
+}
+
+.sub-menu li {
+  display: block;
+  margin-top: 10px;
+  padding-left: 10%;
+}
+
+#livres:hover .sous-sub {
+  display: block;
+}
+
+.sous-sub {
+  display: none;
+  position: absolute;
+  margin-top: 130px;
+  background-color: wheat;
+  width: 250px;
+  padding: 0;
+  left: 100%; 
+  top: 0;
+}
+
+  /*Navbar*/
+  .logo{
+    height: 40px;
+    padding-right: 30px;
+  }
+
+    /*Homepage*/
+
+  .container{
+    width: 100%;
+}
+
+/*
+
+
+  
+
+  .section-container {
+    margin-inline: 100px;
+    max-width: 1300px;
+    flex-direction: column;
+    text-align: center;
+    color: #703d79;
+    margin-top: 7.5vh;
+    gap: 2rem;
+    padding-right: 30px;
+    padding-top: 50px;
+    border: 5px solid #703d79;
+    border-style:dashed;
+    border-block: solid #6dbad4;
+    padding-bottom: 30px;
+
+
+}
+
+.logo-holder{
+  padding-left: 50px;
+}
+
+
+  
+.btn{
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  border-style: 5px solid black;
+  color: hsl(257, 40%, 49%);
+  background-color: #6dbad4;
+  width: 70%;
+  padding: .5em 1.5em;
+  border-radius: 94.896px;
+  transition: 0.5s;
+}
+
+button:hover{
+  color: #fff;
+  background-color: hsl(300, 69%, 71%);
+}
+
+h1{
+  font-weight: 600;
+  font-size: 1.5em;
+  font-family: 'Poppins', sans-serif;
+}
+
+p{
+  font-weight: 400;
+}
+
+h1, #title{
+  margin-bottom: 30px;
+  font-family:cursive;
+}
+*/
+
+#footerWrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* Ajoutez d'autres styles nécessaires */
+}
+
+
+
+/* Ajoutez ces styles dans votre fichier CSS ou dans une balise <style> dans le document */
+.dialog-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  margin-left: 10%;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.dialog-button:hover {
+  background-color:#703d79;
+}
+
+.dialog-content {
+ margin-left: 10%;
+ font-weight: bold;
+
+ 
+}
+
+
+#chat {
+  width: 500px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+#messages {
+  border: 1px solid #ccc;
+  height: 300px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+#formulaire {
+  padding: 10px;
+  text-align: center;
+}
+
+#formulaire input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  width: 80%;
+}
+
+#formulaire button[type="submit"] {
+  border: none;
+  border-radius: 3px;
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+}
+/* Large devices (desktops, 992px and up) */
+
+.responsive-background-color {
+  background: linear-gradient(245.59deg, #954d8e 0%, #553870 28.53%, rgb(128, 186, 203) 75.52%);
+  @media (min-width: 992px) {
+    background-color: white;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+/* Dark Theme */
+body.dark-mode {
+  background: linear-gradient(245.59deg, #583355 0%, #3e2b50 28.53%, rgb(58, 79, 85) 75.52%);
+  color: #f0f0f0;
+}
+
+body.dark-mode .modal{
+  color:rgb(241, 18, 18);
+}
+
+header.dark-mode{
+  background: linear-gradient(245.59deg, #583355 0%, #3e2b50 28.53%, rgb(58, 79, 85) 75.52%);
+}
+
+/* button within a body that has the class dark-mode 
+ICI*/ 
+body button {
+  background: linear-gradient(245.59deg, #ad7ca9 0%, #7b6391 28.53%, rgb(99, 127, 134) 75.52%);
+  color: rgb(90, 58, 87);
+}
+
+body.dark-mode button {
+  background: linear-gradient(245.59deg, #583355 0%, #3e2b50 28.53%, rgb(58, 79, 85) 75.52%);
+  color: black;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+#login-button{
+  background-color: #61b1da;
+  border-radius: 30px;
+  border: 2px solid #553870;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  width: 170px;
+
+}
+
+#loginImage{
+  width: 400px;
+  height: 400px;
+  margin-top: 100px;
+  margin-left: 90px;
+  border-radius: 30px;
+}
+
+#loginForm p{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+  color: #412857;
+}
+
+#loginPage{
+  margin-top: 500px;
+}
+
+
+#usernameConnected{
+  margin-top: 50px;
+  color: #9cc9df;
+  font-size: 15px;
+  font-style: italic;
+  width: 150px;
+  position: relative;
+}
+
+#lgc{
+  margin-top: 40px;
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: rgb(249, 249, 249);
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+}
+
+#divForRule{
+  padding : 100px;
+}
+
+:root::-webkit-scrollbar{
+  display: none;
+}
+
+:root {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
