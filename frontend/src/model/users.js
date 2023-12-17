@@ -16,7 +16,7 @@ const addOneUser = async (user) => {
       },
     };
 
-    const response = await fetch(`${process.env.API_BASE_URL}/auths/register`, options);
+    const response = await fetch(`${process.env.API_BASE_URL}/api/auths/register`, options);
     if (!response.ok) throw new Error(`fetch error : ${response.status} : ${response.statusText}`);
 
     const createdUser = await response.json();
@@ -44,7 +44,7 @@ async function loginUser(username, password) {
     },
   };
 
-  const response = await fetch(`${process.env.API_BASE_URL}/auths/login`, options);
+  const response = await fetch(`${process.env.API_BASE_URL}/api/auths/login`, options);
 
   if (!response.ok) throw new Error('Invalid username or password');
   
