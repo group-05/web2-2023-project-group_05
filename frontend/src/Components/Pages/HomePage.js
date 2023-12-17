@@ -14,7 +14,7 @@ const HomePage = () => {
     <p> Ne cherche plus ! La grande critique est un site dévéloppé spécialement pour toi ! Tu peux choisir le sujet de n'importe quelle catégorie qui t'intéresse et débattre aussi.
     Et pour rendre l'expérience plus inoubliable pour toi, tu peux également créer ton propre sujet qui t'intéresse et lancer le débat !</p>          
     <a href="/topic/add">Lance un sujet !</a>
-    <a href="#" class="ctaa"><i class="ri-play-fill"></i>Regarde notre vidéo</a>
+    <a href="https://youtu.be/M9Ef3c4f03U" class="ctaa"><i class="ri-play-fill"></i>Regarde notre vidéo</a>
 
   </div>
 
