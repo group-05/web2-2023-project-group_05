@@ -2,8 +2,8 @@ import { getAuthenticatedUser } from "../utils/auths";
 
 const readAllCategories = async () => {
     try {
-      const response = await fetch('/api/categories/?order=title');
-        const categories = await response.json();
+      const response = await fetch(`${process.env.API_BASE_URL}/api/categories/?order=title`);
+      const categories = await response.json();
         return categories;
     } catch (err) {
         console.error('getAllCategories::error', err);
@@ -14,8 +14,8 @@ const readAllCategories = async () => {
 const deleteCategory = async (id) => {
   try {
     const authenticatedUser = getAuthenticatedUser();
-    const response = await fetch(`/api/categories/${id}`, {
-          method: 'DELETE',
+    const response = await fetch(`${process.env.API_BASE_URL}/api/categories/${id}`, {
+      method: 'DELETE',
           headers: {
             Authorization: authenticatedUser.token,
           },
@@ -46,7 +46,7 @@ const createCategory = async (title) => {
         },
       };
   
-      const response = await fetch(`/api/categories`, options);
+      const response = await fetch(`${process.env.API_BASE_URL}/api/categories`, options);
 
       const createdCategories = await response.json();
       

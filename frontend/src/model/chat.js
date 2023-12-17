@@ -2,7 +2,7 @@ import { getAuthenticatedUser } from '../utils/auths';
 
 const readAllMessages = async () => {
   try {
-    const res = await fetch(`/api/chats`);
+    const res = await fetch(`${process.env.API_BASE_URL}/api/chats`);
     const messages = await res.json();
     return messages;
   } catch (err) {
@@ -23,7 +23,7 @@ const addOneMessage = async (message) => {
       },
     };
 
-    const response = await fetch(`/api/chats`, options);
+    const response = await fetch(`${process.env.API_BASE_URL}/api/chats`, options);
 
     const createdMessage = await response.json();
 
