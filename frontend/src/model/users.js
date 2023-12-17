@@ -44,7 +44,7 @@ async function loginUser(username, password) {
     },
   };
 
-  const response = await fetch(`${process.env.API_BASE_URL}/api/auths/login`, options);
+  const response = await fetch(`${process.env.API_BASE_URL}/auths/login`, options);
 
   if (!response.ok) throw new Error('Invalid username or password');
   
