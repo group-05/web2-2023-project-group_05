@@ -22,7 +22,6 @@ const readAllTopics = async () => {
           Authorization: authenticatedUser.token,
         },
       };
-      console.log(`after${JSON.stringify(topic)}`)
   
       const response = await fetch(`/api/topics`, options);
 
@@ -94,3 +93,19 @@ const readAllTopics = async () => {
     
 
   export { readAllTopics, addOneTopic, deleteOneTopic, updateOneTopic, getAllCategories };
+
+  /*
+**************************************************************************************
+*    Title: <
+readAllTopics, 
+addOneTopic, 
+deleteOneTopic, 
+updateOneTopic,
+  >
+*    Author: <Baroni>
+*    Date: <15/12/2023>
+*    Code version: <code version>
+*    Availability: <https://github.com/e-vinci/js-exercises/tree/main>
+
+***************************************************************************************
+*/

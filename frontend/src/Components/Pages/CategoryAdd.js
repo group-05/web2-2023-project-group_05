@@ -2,7 +2,7 @@ import Navigate from '../Router/Navigate';
 import { createCategory } from '../../model/categories';
 
 
-
+// Show the add category 
 const CategoriesAdd = () => {
   const addCategorie = `
   <section class="hero">
@@ -46,3 +46,15 @@ const CategoriesAdd = () => {
 
 export default CategoriesAdd;
 
+/*
+**************************************************************************************
+*    Title: <
+CategoriesAdd
+  >
+*    Author: <chat GPT>
+*    Date: <15/12/2023>
+*    Code version: <code version>
+*    Availability: <https://github.com/e-vinci/js-exercises/tree/main>
+
+***************************************************************************************
+*/

@@ -1,7 +1,7 @@
 import anime from 'animejs/lib/anime.es';
 import debate from '../../img/debate.jpg';
 
-
+// Show The Home page with animation
 const HomePage = () => {
   const main = document.querySelector('main');
   main.innerHTML = `
@@ -21,6 +21,7 @@ const HomePage = () => {
   <div class="hero-img">
   <img src="${debate}" data-uri="#">
   </div>
+  
 </section>
 
 `;
@@ -69,3 +70,16 @@ heroImg.addEventListener('mouseleave', () => {
 };
 
 export default HomePage;
+
+/*
+**************************************************************************************
+*    Title: <
+HomePage
+  >
+*    Author: <chat GPT>
+*    Date: <15/12/2023>
+*    Code version: <code version>
+*    Availability: <https://github.com/e-vinci/js-exercises/tree/main>
+
+***************************************************************************************
+*/

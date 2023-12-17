@@ -1,6 +1,8 @@
 import { readAllTopics, deleteOneTopic, updateOneTopic, getAllCategories } from '../../model/topic';
 import { getAuthenticatedUser } from '../../utils/auths';
+import Navigate from '../Router/Navigate';
 
+// Show topics of its owners
 const MyTopics = async () => {
   const viewTopic = `
   <section class="hero">
@@ -28,11 +30,9 @@ const MyTopics = async () => {
   const y = [];
   x.forEach((e) => 
     {
-        console.log(e)
         if(e.user===user) y.push(e)
     }
     )
-    console.log(y)
   const [topics, categories] = await Promise.all([y, getAllCategories()]);
 
   const topicAsHtmlTable = getHtmlTopicTableAsString(topics, categories);
@@ -59,6 +59,7 @@ function getHtmlTopicTableAsString(topics, categories) {
             <th scope="col">Title</th>
             <th scope="col">Description</th>
             <th scope="col">Category</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -84,6 +85,9 @@ function getHtmlTopicTableAsString(topics, categories) {
                   </td>
                   <td>
                     <button type="button" class="btn btn-info update" data-element-id="${element.id}">Save</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-info chat" data-element-id="${element.id}">Chat</button>
                   </td>
                 </tr>
                 <span class="error"></span>
@@ -133,6 +137,28 @@ function attachEventListeners() {
       MyTopics();
     });
   });
+
+  // gestionnaire d'événements pour les boutons de chat
+  topicWrapper.querySelectorAll('.chat').forEach((button) => {
+    button.addEventListener('click', async () => {
+      
+
+      Navigate(`/chat`);
+    });
+  });
 }
 
 export default MyTopics;
+
+/*
+**************************************************************************************
+*    Title: <
+MyTopics
+  >
+*    Author: <Baroni>
+*    Date: <15/12/2023>
+*    Code version: <code version>
+*    Availability: <https://github.com/e-vinci/js-exercises/tree/main>
+
+***************************************************************************************
+*/

@@ -26,6 +26,7 @@ body.dark-mode footer {
   color: #e91b1b;
   /* ... Autres styles du footer en mode sombre ... */
 }
+
 header {
   position: fixed;
   right: 0;
@@ -45,7 +46,6 @@ header {
 }
 
 .logo {
-  border-radius: 40px;
   font-size: 40px;
   font-weight: 700;
   color: rgb(64, 19, 96);
@@ -134,6 +134,7 @@ section{
   width: 100%;
   height: 100%;
 }
+
 .hero-text a{ 
   display: inline-block;
   color: white;
@@ -468,3 +469,103 @@ body.dark-mode button {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+#messages {
+  border: 1px solid #ccc;
+  height: 300px;
+  overflow-y: scroll;
+  padding: 10px;
+  background: linear-gradient(245.59deg, #954d8e 0%, #553870 28.53%, rgb(128, 186, 203) 75.52%);
+}
+
+#formulaire {
+  padding: 10px;
+  text-align: center;
+}
+
+#formulaire input[type="text"] {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  width: 80%;
+}
+
+#formulaire button[type="submit"] {
+  border: none;
+  border-radius: 3px;
+  padding: 8px;
+  background-color: #4caf50;
+  color: #fff;
+  background: linear-gradient(245.59deg, #954d8e 0%, #553870 28.53%, rgb(128, 186, 203) 75.52%);
+}
+
+/* Ajoutez ces styles dans votre fichier CSS ou directement dans votre fichier JavaScript */
+#chatWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Assurez-vous que le chat occupe 100% de la hauteur de la vue */
+  max-width: 1200px; /* Ajustez la largeur maximale selon vos besoins */
+  width: 100%;
+  margin: 20px auto; /* Ajoutez une marge autour du chat */
+  padding: 20px; /* Ajoutez une marge interne pour l'espace entre le chat et son contenu */
+  box-sizing: border-box; /* Inclut la marge et le rembourrage dans la largeur totale */
+}
+
+#chat {
+  /* Ajoutez d'autres styles selon vos besoins */
+  margin: 0 auto;
+  font-family: sans-serif;
+  width: 100%; /* Utilise la largeur totale du conteneur parent */
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: linear-gradient(245.59deg, #954d8e 0%, #553870 28.53%, rgb(128, 186, 203) 75.52%);
+  border-radius: 5px;
+}
+
+#formulaire {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  width: 500px;
+}
+
+#message {
+  flex: 1;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Assurez-vous que l'élément occupe 100% de la hauteur de la vue */
+}
+
+body.dark-mode #chat {
+  background: linear-gradient(245.59deg, #583355 0%, #3e2b50 28.53%, rgb(58, 79, 85) 75.52%); /* Dégradé de couleur pour le chat en mode sombre */
+  border: 1px solid #555;
+}
+
+body.dark-mode #messages {
+  background: linear-gradient(245.59deg, #583355 0%, #3e2b50 28.53%, rgb(58, 79, 85) 75.52%); /* Dégradé de couleur pour les messages en mode sombre */
+  border: 1px solid #555;
+}
+
+body.dark-mode #formulaire button[type="submit"] {
+  background: linear-gradient(245.59deg, #583355 0%, #3e2b50 28.53%, rgb(58, 79, 85) 75.52%); /* Dégradé de couleur pour le bouton Envoyer en mode sombre */
+}
+
+
+
+ /*
+**************************************************************************************
+*    Title: <
+All
+  >
+*    Author: <Baroni, Chat GPT>
+*    Date: <15/12/2023>
+*    Code version: <code version>
+*    Availability: <https://github.com/e-vinci/js-exercises/tree/main>
+
+***************************************************************************************
+*/

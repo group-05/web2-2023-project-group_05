@@ -1,10 +1,9 @@
 import logo from '../../img/IMAGE.png';
-// eslint-disable-next-line no-unused-vars
-import searchIcon from '../../img/rechercher.png';
+// import searchIcon from '../../img/rechercher.png';
 
 import { getAuthenticatedUser, isAuthenticated, getAuthenticatedUserAdmin } from '../../utils/auths';
 
-
+// render the navbar
 const Navbar = () => {
   renderNavbar();
 };
@@ -15,11 +14,7 @@ function renderNavbar() {
 
   const unauthenticatedUser = `
 <div class="logo-container">
-  <a href="#" data-uri="/">
-    <img class="logo" src="${logo}" data-uri="/">
-  </a>
   <a id="lgc" href="#" data-uri="/">La grande critique</a>
-
 </div>
 
 

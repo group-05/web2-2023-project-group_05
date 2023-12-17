@@ -6,7 +6,13 @@
     "deploy": "npm run build && gh-pages -d dist",
     "dev": "webpack --mode development --config webpack.config.base.js && cp dist/index.html dist/404.html",
     "build": "webpack --mode production --config webpack.config.prod.js && cp dist/index.html dist/404.html",
-    "start": "webpack serve --mode development --config webpack.config.base.js"
+    "start": "webpack serve --mode development --config webpack.config.base.js",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier":"npm run prettier -- --check",
+    "prettier:fix": "prettier --write .",
+    "code:fix": "prettier --write . && eslint --fix ."
+  
   },
   "author": "e-baron",
   "license": "CC-BY-SA-4.0",

@@ -6,6 +6,7 @@ import { loginUser } from '../../model/users';
 import Navigate from '../Router/Navigate';
 import image from '../../img/login-image.png';
 
+// Clear the page, render the login form 
 const LoginPage = () => {
   clearPage();
   renderPageTitle('Login');
@@ -25,6 +26,7 @@ function checkUser(){
     try {
       await loginUser(username.value, password.value)
       Navigate('/');
+      window.location.reload();// c'est pour mettre a jour l'utilisateur actuel obliger de faire ça pour le chat
     } catch (error) {
 
       console.error(error);
@@ -81,3 +83,16 @@ function onCheckboxClicked(e) {
 }
 
 export default LoginPage;
+
+/*
+**************************************************************************************
+*    Title: <
+Login Page
+  >
+*    Author: <Baroni>
+*    Date: <15/12/2023>
+*    Code version: <code version>
+*    Availability: <https://github.com/e-vinci/js-exercises/tree/main>
+
+***************************************************************************************
+*/

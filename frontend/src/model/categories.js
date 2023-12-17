@@ -11,8 +11,6 @@ const readAllCategories = async () => {
     }
 };
 
-
-
 const deleteCategory = async (id) => {
   try {
     const authenticatedUser = getAuthenticatedUser();
@@ -61,3 +59,16 @@ const createCategory = async (title) => {
   };
 
 export { readAllCategories, deleteCategory, createCategory } ;
+
+/*
+**************************************************************************************
+*    Title: <
+createCategory
+  >
+*    Author: <Chat GPT>
+*    Date: <15/12/2023>
+*    Code version: <code version>
+*    Availability: <https://github.com/e-vinci/js-exercises/tree/main>
+
+***************************************************************************************
+*/

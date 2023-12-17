@@ -1,9 +1,10 @@
-// eslint-disable-next-line no-unused-vars
 import { readAllCategories, deleteCategory } from '../../model/categories';
 import { getAuthenticatedUserAdmin } from '../../utils/auths';
 
 let existingDialog = null;
 
+
+// Show all the categories
 const categoriesView = async () => {
     const viewCategorie = `
     <section class="hero">
@@ -33,9 +34,8 @@ const categoriesView = async () => {
                
                 // eslint-disable-next-line prefer-destructuring
                 const elementId = button.closest('td').dataset.elementId;
-    
                 
-                // eslint-disable-next-line no-restricted-globals
+                // eslint-disable-next-line no-restricted-globals, no-alert
                 const userConfirmed = confirm('Voulez-vous vraiment supprimer cette catégorie?');
     
                 if (userConfirmed) {
@@ -147,3 +147,16 @@ const categoriesView = async () => {
   }
 
 export default categoriesView;
+
+/*
+**************************************************************************************
+*    Title: <
+categoriesView
+  >
+*    Author: <chat GPT>
+*    Date: <15/12/2023>
+*    Code version: <code version>
+*    Availability: <https://github.com/e-vinci/js-exercises/tree/main>
+
+***************************************************************************************
+*/

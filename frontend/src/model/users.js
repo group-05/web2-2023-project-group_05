@@ -16,7 +16,7 @@ const addOneUser = async (user) => {
       },
     };
 
-    const response = await fetch(`${process.env.API_BASE_URL}/api/auths/register`, options);
+    const response = await fetch(`${process.env.API_BASE_URL}/auths/register`, options);
     if (!response.ok) throw new Error(`fetch error : ${response.status} : ${response.statusText}`);
 
     const createdUser = await response.json();
@@ -44,17 +44,13 @@ async function loginUser(username, password) {
     },
   };
 
-  const response = await fetch(`${process.env.API_BASE_URL}/api/auths/login`, options);
+  const response = await fetch(`${process.env.API_BASE_URL}/auths/login`, options);
 
   if (!response.ok) throw new Error('Invalid username or password');
   
   const authenticatedUser = await response.json();
 
-  console.log('Authenticated user : ', authenticatedUser);
-
   setAuthenticatedUser(authenticatedUser);
-
-  console.log("SETAUTHENTICATED",setAuthenticatedUser(authenticatedUser));
 
   Navbar();
 
@@ -63,3 +59,17 @@ async function loginUser(username, password) {
 
 
 export { addOneUser, loginUser };
+
+ /*
+**************************************************************************************
+*    Title: <
+addOneUser, 
+loginUser
+  >
+*    Author: <Baroni>
+*    Date: <15/12/2023>
+*    Code version: <code version>
+*    Availability: <https://github.com/e-vinci/js-exercises/tree/main>
+
+***************************************************************************************
+*/

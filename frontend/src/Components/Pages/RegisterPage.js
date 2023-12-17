@@ -3,6 +3,7 @@ import { addOneUser } from '../../model/users';
 import Navigate from '../Router/Navigate';
 import { getRememberMe, setRememberMe } from '../../utils/auths';
 
+// Clear the page, render the register form 
 const RegisterPage = () => {
   clearPage();
   renderPageTitle('Register');
@@ -89,3 +90,16 @@ function onCheckboxClicked(e) {
 }
 
 export default RegisterPage;
+
+/*
+**************************************************************************************
+*    Title: <
+Register
+  >
+*    Author: <Baroni>
+*    Date: <15/12/2023>
+*    Code version: <code version>
+*    Availability: <https://github.com/e-vinci/js-exercises/tree/main>
+
+***************************************************************************************
+*/
