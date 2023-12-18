@@ -12,7 +12,7 @@ function renderGoBackHomeButton() {
   submit.value = 'Go back to HomePage';
   submit.className = 'btn btn-secondary mt-3';
   submit.addEventListener('click', () => {
-    Navigate('/');
+    Navigate(`${process.env.PATH_PREFIX}`);
   });
 
   main.appendChild(submit);

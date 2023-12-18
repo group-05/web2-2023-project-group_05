@@ -27,7 +27,7 @@ function eventListenerCheckPasswords() {
       span.className = 'alert alert-danger m-5';
       span.role = 'alert';
       isOk = false;
-      Navigate('/register');
+      Navigate(`${process.env.PATH_PREFIX}register`);
     }
 
     if (isOk) {
@@ -37,7 +37,7 @@ function eventListenerCheckPasswords() {
       };
       await addOneUser(createUser);
 
-      Navigate('/login');
+      Navigate(`${process.env.PATH_PREFIX}login`);
     }
   });
 }

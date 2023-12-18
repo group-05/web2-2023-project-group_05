@@ -143,7 +143,7 @@ function attachEventListeners() {
     button.addEventListener('click', async () => {
       
 
-      Navigate(`/chat`);
+      Navigate(`${process.env.PATH_PREFIX}chat`);
     });
   });
 }

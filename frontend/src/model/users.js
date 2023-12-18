@@ -1,4 +1,3 @@
-
 import { setAuthenticatedUser } from '../utils/auths';
 
 import Navigate from '../Components/Router/Navigate';
@@ -16,7 +15,7 @@ const addOneUser = async (user) => {
       },
     };
 
-    const response = await fetch(`${process.env.API_BASE_URL}/api/auths/register`, options);
+    const response = await fetch(`${process.env.API_BASE_URL}/auths/register`, options);
     if (!response.ok) throw new Error(`fetch error : ${response.status} : ${response.statusText}`);
 
     const createdUser = await response.json();
@@ -43,9 +42,8 @@ async function loginUser(username, password) {
       'Content-Type': 'application/json',
     },
   };
-
   const response = await fetch(`${process.env.API_BASE_URL}/auths/login`, options);
-
+  console.log(response)
   if (!response.ok) throw new Error('Invalid username or password');
   
   const authenticatedUser = await response.json();
@@ -53,8 +51,9 @@ async function loginUser(username, password) {
   setAuthenticatedUser(authenticatedUser);
 
   Navbar();
+  console.log(process.env.PATH_PREFIX)
 
-  Navigate('/');
+  Navigate(`${process.env.PATH_PREFIX}`);
 }
 
 

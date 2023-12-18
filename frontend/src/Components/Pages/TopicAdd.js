@@ -6,7 +6,7 @@ import { getAuthenticatedUser } from '../../utils/auths';
 const TopicAdd = () => {
   if (getAuthenticatedUser() === undefined) {
     
-    Navigate('/login');
+    Navigate(`${process.env.PATH_PREFIX}login`);
     return;
   }
 
@@ -168,7 +168,7 @@ const TopicAdd = () => {
 
     addOneTopic(topicToBeCreated);
 
-    Navigate('/topic/view');
+    Navigate(`${process.env.PATH_PREFIX}topic/view`);
   });
 
   updateCategoryDropdown();

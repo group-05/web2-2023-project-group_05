@@ -32,12 +32,12 @@ const refreshMessages = async () => {
 const Chat = async () => {
 
   if (!authenticatedUser) {
-    Navigate('/login');
+    Navigate(`${process.env.PATH_PREFIX}login`);
     return;
   }
 
   if (getAuthenticatedUser() === undefined) {
-    Navigate('/login');
+    Navigate(`${process.env.PATH_PREFIX}login`);
     return;
   }
   const viewChat = `

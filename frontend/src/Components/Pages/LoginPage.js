@@ -25,7 +25,7 @@ function checkUser(){
 
     try {
       await loginUser(username.value, password.value)
-      Navigate('/');
+      Navigate(`${process.env.PATH_PREFIX}`);
       window.location.reload();// c'est pour mettre a jour l'utilisateur actuel obliger de faire ça pour le chat
     } catch (error) {
 

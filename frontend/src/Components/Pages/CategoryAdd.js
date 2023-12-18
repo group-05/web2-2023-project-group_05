@@ -40,7 +40,7 @@ const CategoriesAdd = () => {
     
     createCategory(categorieToBeCreated);
 
-    Navigate('/categories/view');
+    Navigate(`${process.env.PATH_PREFIX}categories/view`);
   });
 };
 

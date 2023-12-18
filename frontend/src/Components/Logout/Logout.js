@@ -6,7 +6,7 @@ import Navigate from '../Router/Navigate';
 const Logout = () => {
   clearAuthenticatedUser();
   Navbar();
-  Navigate('/login');
+  Navigate(`${process.env.PATH_PREFIX}login`);
 };
 
 export default Logout;

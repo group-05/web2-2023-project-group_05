@@ -20,7 +20,7 @@ async function renderResults() {
 
     form.addEventListener("submit", async (e) => {
         e.preventDefault();
-        Navigate('/results');
+        Navigate(`${process.env.PATH_PREFIX}results`);
 
         p.innerHTML = '';
         p2.innerHTML = '';
